@@ -31,19 +31,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        visit();
+//        array();
+//        encryptor();
+//        jniFileOperation();
+//        listDirAllFile();
+        jniBitmap();
+    }
+
+    private void visit() {
         Utils mUtils = new Utils();
         mUtils.accessField();
         mUtils.accessStaticField();
         mUtils.accessMethod();
         mUtils.accessStaticMethod("1--0");
         Utils utils = mUtils.accessConstructor();
-//        utils.showText="123";
+        utils.showText = "123";
         Toast.makeText(this, Utils.stringFromJNI() + "    " + mUtils.showText + "    " + utils.showText, Toast.LENGTH_SHORT).show();
-//        array();
-//        encryptor();
-//        jniFileOperation();
-//        listDirAllFile();
-        jniBitmap();
     }
 
     private void array() {
